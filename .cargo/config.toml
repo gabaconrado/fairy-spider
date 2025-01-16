@@ -1,0 +1,13 @@
+# Use the unstable core library compiler feature. This enables the core library to be built on demand
+# instead of requiring the pre-compiled versions shipped with the compiler
+[unstable]
+build-std-features = ["compiler-builtins-mem"]
+build-std = ["core", "compiler_builtins"]
+
+# Set the default build target
+[build]
+target = "resources/target.json"
+
+# Set the default run target
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
