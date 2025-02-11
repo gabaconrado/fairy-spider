@@ -4,6 +4,7 @@ use core::panic::PanicInfo;
 ///
 /// Does nothing
 #[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
+fn panic(info: &PanicInfo) -> ! {
+    crate::println!("{info}");
     loop {}
 }

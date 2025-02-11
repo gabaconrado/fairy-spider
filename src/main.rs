@@ -23,6 +23,6 @@ pub const WELCOME_MSG: &[u8] = b"Welcome to Fairy Spider";
 /// - "extern C" is used so the compiler uses the C calling convention for this method
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    vga::print_vga(WELCOME_MSG);
+    println!("Hello world, {}", "gabe");
     loop {}
 }
